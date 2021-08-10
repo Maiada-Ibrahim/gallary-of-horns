@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 // import Button from 'react-bootstrap/Button';
 // import {Card,Button} from 'react-bootstrap/';
 import SelectedBeast from './SelectedBeast ';
+// import Modal from 'react-bootstrap/Modal';
 
 
 
@@ -13,7 +14,8 @@ class HornedBeasts extends React.Component {
     super(props);
     this.state = {
       numberOfPets: 0,
-      imgname: ''
+      imgname: '',
+      show: false
     };
 
 
@@ -21,20 +23,33 @@ class HornedBeasts extends React.Component {
 
 
   }
-
+  handleShow = () =>  this.setState({
+    show: this.state.show = true
+  });
   increaseNuOfPets = () => {
     this.setState({
       numberOfPets: this.state.numberOfPets + 1
     });
   };
   retrnimgtite = () => {
-    // console.log(this.state.imgname);
+    
     this.setState({
       imgname: this.state.imgname = this.props.title
+      
+     
+      
     });
-    // console.log(this.state.imgname);
-    
+    if (this.state.imgname === this.props.title) {
+      
+      this.handleShow;
+       
 
+
+    }
+    
+    
+    
+    
 
   };
 
@@ -60,11 +75,24 @@ class HornedBeasts extends React.Component {
             {/* <Button variant="primary">Go somewhere</Button> */}
           </Card.Body>
         </Card>
+        {/* <Modal show={this.state.show} >
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+
+        </Modal> */}
         < SelectedBeast 
           
           title={this.props.title}
           description={this.props.description}
           imageUrl={this.props.imageUrl}
+          retrnimgtite = {this.retrnimgtite}
+          handleShow = {this.handleShow}
+          show={this.state.show}
+
+          
+
 
         />
 
