@@ -1,14 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-bootstrap/Modal';
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 
 class SelectedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       
-      show: false
+      show: this.props.show
     };
 
   }
@@ -38,20 +38,25 @@ class SelectedBeast extends React.Component {
  
   giveMeTuna = () => {
     this.props.retrnimgtite();
-    this.props.handleShow();
+    // this.props.handleClose();
+    console.log('hi');
   }
+  
 
   render() {
 
     return (
       <div>
-        { this.props.handleShow()}
-        <Modal show={this.show} >
+        <Modal show={this.props.show} onClick={this.props.handleClose} >
+          {this.giveMeTunahandleShow}
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-
+          <Modal.Body> <img height='150px' width='300px' src={this.props.imageUrl} alt='h' title='h' />
+            <br></br>{this.props.description}</Modal.Body>
+          <Button variant="secondary" onClick={this.propshandleClose}>
+            Close
+          </Button>
         </Modal>
       </div>
     );

@@ -41,7 +41,7 @@ class HornedBeasts extends React.Component {
     });
     if (this.state.imgname === this.props.title) {
       
-      this.handleShow;
+      this.handleShow();
        
 
 
@@ -52,7 +52,9 @@ class HornedBeasts extends React.Component {
     
 
   };
-
+  handleClose = () =>   this.setState({
+    show: this.state.show = false
+  });
   render() {
 
 
@@ -90,6 +92,7 @@ class HornedBeasts extends React.Component {
           retrnimgtite = {this.retrnimgtite}
           handleShow = {this.handleShow}
           show={this.state.show}
+          handleClose = {this.handleClose}
 
           
 
