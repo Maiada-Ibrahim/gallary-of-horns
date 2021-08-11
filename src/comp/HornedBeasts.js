@@ -6,8 +6,7 @@ import Card from 'react-bootstrap/Card';
 // import {Card,Button} from 'react-bootstrap/';
 import SelectedBeast from './SelectedBeast ';
 // import Modal from 'react-bootstrap/Modal';
-
-
+import './HornedBeasts.css';
 
 class HornedBeasts extends React.Component {
   constructor(props) {
@@ -59,15 +58,15 @@ class HornedBeasts extends React.Component {
 
 
     return (
-      <div>
+      <div >
 
         {/* // <div>  <h2>{this.props.title}</h2>
       //   <img onClick={this.increaseNuOfPets}  src={this.props.imageUrl} alt='h' title='h' />
       //   <p>{this.props.description}</p>
       //   <p> ❤️favorited = {this.state.numberOfPets}</p>
       //   <br /><br /><br /><br /><br /><br /> </div> */}
-        <Card onClick={this.retrnimgtite} style={{ width: '18rem' }}>
-          <Card.Img variant="top" onClick={this.increaseNuOfPets} src={this.props.imageUrl} alt='h' title='h' />
+        <Card onClick={this.retrnimgtite} style={{ width: '25rem' },{ width: '15rem' } }>
+          <Card.Img variant="top" onClick={this.increaseNuOfPets} src={this.props.imageUrl} alt='h' title='h'height="150px" width="10rem" />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
