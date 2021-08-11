@@ -14,41 +14,19 @@ class HornedBeasts extends React.Component {
     super(props);
     this.state = {
       numberOfPets: 0,
-      imgname: '',
-      show: false
+      // imgname: '',
+      // show: false
     };
 
   }
-  handleShow = () =>  this.setState({
-    show: this.state.show = true
-  });
-  handleClose = () =>   this.setState({
-    show: this.state.show = false
-  });
+ 
+
   increaseNuOfPets = () => {
     this.setState({
       numberOfPets: this.state.numberOfPets + 1
     });
   };
-  retrnimgtite = () => {
-  
-    this.setState({
-      imgname: this.state.imgname = this.props.title
-    });
-    if (this.state.imgname === this.props.title) {
-      
-      this.handleShow();
-      
-       
 
-
-    }
-    
-    
-    
-    
-
-  };
 
   render() {
 
@@ -73,7 +51,7 @@ class HornedBeasts extends React.Component {
           </Card.Body>
         </Card>
      
-        < SelectedBeast 
+        {/* < SelectedBeast 
           
           title={this.props.title}
           description={this.props.description}
@@ -85,7 +63,7 @@ class HornedBeasts extends React.Component {
           
 
 
-        />
+        /> */}
 
       </div>
     );
