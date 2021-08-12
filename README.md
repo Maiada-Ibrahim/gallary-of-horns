@@ -87,3 +87,11 @@ Finish time: 7:00
 
 Actual time needed to complete: 8 hour
 
+## lab-03
+Estimate of time needed to complete: 3 hour
+
+Start time: 1:00
+
+Finish time: 6:00
+
+Actual time needed to complete: 5 hour

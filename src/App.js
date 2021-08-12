@@ -55,7 +55,7 @@ class App extends React.Component {
         <FormDesgin onchangefun={this.onchangefun}
           arrayafterfillter= {this.state.arrayafterfillter}
         />
-        <Main />
+        <Main  arrayafterfillter= {this.state.arrayafterfillter} onchangefun={this.onchangefun}/>
         <Footer />
         <Footer />
 
