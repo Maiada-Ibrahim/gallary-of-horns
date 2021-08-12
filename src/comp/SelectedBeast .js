@@ -9,6 +9,7 @@ class SelectedBeast extends React.Component {
     this.state = {
       
       show: this.props.show
+      
     };
 
   }
